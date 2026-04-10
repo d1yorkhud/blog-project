@@ -12,5 +12,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
+    #After editing posts and hit the 'save' button this
+    #function helps you return this page again
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.pk)])
